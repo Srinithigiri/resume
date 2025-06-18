@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suriya Tamil Movie Recommendations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #7dd3fc 50%, #fef3c7 100%);
+            margin: 0;
+            padding: 60px 20px;
+            min-height: 100vh;
+            color: #1f2937;
+        }
+        header {
+            background: linear-gradient(to right, #e11d48, #7c3aed, #3b82f6);
+            color: white;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            margin: 0 auto 70px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            padding: 20px 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .movies-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            padding: 40px 15px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .movie-card {
+            background: linear-gradient(to bottom, #ffffff, #f9fafb);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+            width: 300px;
+        }
+        .movie-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .movie-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            padding: 12px;
+            background: linear-gradient(45deg, #e5e7eb, #f3f4f6);
+            border: 2px solid #d1d5db;
+        }
+        .movie-card h3 {
+            font-size: 22px;
+            color: #1e3a8a;
+            margin: 20px 0 10px;
+            padding: 0 15px;
+            font-weight: 700;
+        }
+        .movie-card h3 a {
+            color: #1e3a8a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .movie-card h3 a:hover {
+            color: #db2777;
+        }
+        .movie-card p {
+            font-size: 16px;
+            color: #4b5563;
+            margin: 0;
+            padding: 0 20px 15px;
+            line-height: 1.5;
+        }
+        .movie-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #f59e0b, #ef4444, #db2777);
+            border-radius: 15px 15px 0 0;
+        }
+        .movie-card::after {
+            content: '🎬';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 30px;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+        .movie-card:hover::after {
+            opacity: 0.9;
+        }
+        @media (max-width: 800px) {
+            .movies-container {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                padding: 30px 10px;
+                gap: 40px;
+            }
+            .movie-card {
+                padding: 30px 20px;
+                width: 300px;
+            }
+            .movie-card img {
+                height: 400px;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 28px;
+                padding: 15px 20px;
+            }
+            header {
+                padding: 20px 0;
+                margin-bottom: 50px;
+            }
+        }
+        @media (max-width: 500px) {
+            .movie-card {
+                width: 240px;
+            }
+            .movie-card img {
+                height: 320px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Suriya Tamil Movies</h1>
+    </header>
+    <div class="movies-container">
+        <div class="movie-card">
+            <img src="bim.png" alt="Jai Bhim Movie Poster">
+            <h3><a href="https://www.primevideo.com/detail/Jai-Bhim/0Q4U1M7A8Z4Z8Z4Z8Z4Z8Z4" target="_blank">Jai Bhim</a></h3>
+            <p>2021 | Legal Drama</p>
+        </div>
+        <div class="movie-card">
+            <img src="soorari.png" alt="Soorarai Pottru Movie Poster">
+            <h3><a href="https://www.primevideo.com/detail/Soorarai-Pottru/0Q4U1M7A8Z4Z8Z4Z8Z4Z8Z4" target="_blank">Soorarai Pottru</a></h3>
+            <p>2020 | Drama</p>
+        </div>
+        <div class="movie-card">
+            <img src="anjan.png" alt="Anjaan Movie Poster">
+            <h3><a href="https://www.netflix.com/title/80038267" target="_blank">Anjaan</a></h3>
+            <p>2014 | Action Thriller</p>
+        </div>
+    </div>
+</body>
+</html>
